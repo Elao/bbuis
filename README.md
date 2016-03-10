@@ -1,2 +1,2 @@
-This is a sandbox reposotiry for testing Boostrap Backoffice template UI/UX
+This is a sandbox repository for testing Boostrap Backoffice template UI/UX
 
