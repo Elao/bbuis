@@ -38,6 +38,7 @@ function showOrHideBatchActions()
   var rowSelectedCount = $('.selected-row:checked').length;
 
   if (rowSelectedCount) {
+    $('.new-action').hide();
     $('.batch-actions').show();
 
     if (rowSelectedCount > 1) {
@@ -49,6 +50,7 @@ function showOrHideBatchActions()
     $('.batch-actions-label').text(batch_action_label);
   } else {
     $('.batch-actions').hide();
+    $('.new-action').show();
   }
 }
 

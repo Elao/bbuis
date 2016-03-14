@@ -97,16 +97,17 @@
 
     <h1>
         6 Users
-        <a class="btn btn-primary">
-            <i class="glyphicon glyphicon-add"></i>
-            New
-        </a>
     </h1>
 
     <form class="form-horizontal">
 
         <div class="row filters">
             <div class="col-md-3">
+                <a class="btn btn-primary new-action">
+                    <i class="glyphicon glyphicon-add"></i>
+                    New
+                </a>
+
                 <div class="dropdown batch-actions">
                     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <span class="batch-actions-label">Batch actions</span>
@@ -142,36 +143,48 @@
             </div>
         </div>
 
-        <table class="table table-hover table-bordered table-striped selectable-row">
+        <table class="table table-hover selectable-row">
             <thead>
                 <tr>
                     <th class="minwidth"><input type="checkbox" data-check-all=".selected-row"></th>
                     <th>
                         Name
-                        <input type="text" class="form-control input-sm" placeholder="Search a name" />
                     </th>
                     <th>
-                        Comment
-                        <select class="form-control input-sm">
-                            <option value="">All</option>
-                            <option>Requires call</option>
-                        </select>
+                        <div class="btn-group">
+                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Comment <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">All</a></li>
+                                <li><a href="#">None</a></li>
+                                <li><a href="#">Full</a></li>
+                            </ul>
+                        </div>
                     </th>
-                    <th class="minwidth">
-                        Required
-                        <select class="form-control input-sm">
-                            <option value="">All</option>
-                            <option>Yes</option>
-                            <option>No</option>
-                        </select>
+                    <th>
+                        <div class="btn-group">
+                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Required <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">All</a></li>
+                                <li><a href="#">Yes</a></li>
+                                <li><a href="#">No</a></li>
+                            </ul>
+                        </div>
                     </th>
-                    <th class="minwidth">
-                        Status
-                        <select class="form-control input-sm">
-                            <option value="">All</option>
-                            <option>Approved</option>
-                            <option>Denied</option>
-                        </select>
+                    <th>
+                        <div class="btn-group">
+                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Status <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">All</a></li>
+                                <li><a href="#">Approved</a></li>
+                                <li><a href="#">Denied</a></li>
+                            </ul>
+                        </div>
                     </th>
                     <th class="col-md-1">Actions</th>
                 </tr>
