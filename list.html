@@ -84,9 +84,13 @@
     </div>
 </nav>
 
-<div class="container">
+<div class="container-fluid">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Users</a>
+            </div>
+
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Users management <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Who see who</a></li>
@@ -96,13 +100,13 @@
     </nav>
 
     <h1>
-        6 Users
+        6 users
     </h1>
 
     <form class="form-horizontal">
 
         <div class="row filters">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <a class="btn btn-primary new-action">New</a>
 
                 <div class="dropdown batch-actions">
@@ -118,39 +122,42 @@
                 </div>
             </div>
 
-            <div class="col-md-2">
-                <select class="form-control">
-                    <option value="">Filters</option>
-                    <option>Has purchased at least one product</option>
-                    <option>Disabled</option>
-                </select>
-            </div>
-
-            <div class="col-md-3">
-                <input type="text" placeholder="Search a name or an email" class="form-control">
-            </div>
-
-            <div class="col-md-2">
-                <div class="form-control-static">
-                    <a href="#">
-                        <span class="glyphicon glyphicon-remove"></span>
-                        Reset filters
-                    </a>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filters <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Has purchased at least one product</a></li>
+                            <li><a href="#">Registered in last 10 days</a></li>
+                            <li><a href="#">Disabled</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" placeholder="Search a name or an email" class="form-control">
                 </div>
             </div>
 
-            <div class="col-md-2">
-                <div class="dropdown pull-right">
+            <div class="col-md-4 text-right">
+                <div class="dropdown">
                     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         Sort by
                         <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="#">Newest</a></li>
                         <li><a href="#">Oldest</a></li>
                     </ul>
                 </div>
             </div>
+        </div>
+
+        <div class="text-center filters-list">
+            <span class="label label-default">Has purchased at least one product</span>
+            <span class="label label-default">Status: Approved</span>
+            <span class="label label-default">Required: Yes</span>
+            <a href="#" class="btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-remove"></span>
+                Reset filters
+            </a>
         </div>
 
         <table class="table table-hover selectable-row">
@@ -196,7 +203,7 @@
                             </ul>
                         </div>
                     </th>
-                    <th class="col-md-1">Actions</th>
+                    <th class="text-right">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -212,14 +219,14 @@
                     <td><span class="glyphicon glyphicon-ok" title="required"></span></td>
                     <td>None</td>
                     <td><div class="label label-success">Approved</div></td>
-                    <td>
+                    <td class="text-right">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default btn-sm">Edit</button>
+                            <a href="#" class="btn btn-default btn-sm">Edit</a>
                             <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu dropdown-menu-right">
                                 <li><a href="#">Disable</a></li>
                                 <li><a href="#">Duplicate</a></li>
                                 <li><a href="#">Delete</a></li>
@@ -237,14 +244,14 @@
                     <td></td>
                     <td>Requires call</td>
                     <td><div class="label label-success">Approved</div></td>
-                    <td>
+                    <td class="text-right">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default btn-sm">Edit</button>
                             <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu dropdown-menu-right">
                                 <li><a href="#">Disable</a></li>
                                 <li><a href="#">Duplicate</a></li>
                                 <li><a href="#">Delete</a></li>
@@ -262,14 +269,14 @@
                     <td><span class="glyphicon glyphicon-ok" title="required"></span></td>
                     <td>None</td>
                     <td><div class="label label-danger">Denied</div></td>
-                    <td>
+                    <td class="text-right">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default btn-sm">Edit</button>
                             <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu dropdown-menu-right">
                                 <li><a href="#">Disable</a></li>
                                 <li><a href="#">Duplicate</a></li>
                                 <li><a href="#">Delete</a></li>
@@ -287,14 +294,14 @@
                     <td></td>
                     <td>None</td>
                     <td><div class="label label-success">Approved</div></td>
-                    <td>
+                    <td class="text-right">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default btn-sm">Edit</button>
                             <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu dropdown-menu-right">
                                 <li><a href="#">Disable</a></li>
                                 <li><a href="#">Duplicate</a></li>
                                 <li><a href="#">Delete</a></li>
@@ -312,14 +319,14 @@
                     <td></td>
                     <td>Requires call</td>
                     <td><div class="label label-success">Approved</div></td>
-                    <td>
+                    <td class="text-right">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default btn-sm">Edit</button>
                             <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu dropdown-menu-right">
                                 <li><a href="#">Disable</a></li>
                                 <li><a href="#">Duplicate</a></li>
                                 <li><a href="#">Delete</a></li>
@@ -337,14 +344,14 @@
                     <td><span class="glyphicon glyphicon-ok" title="required"></span></td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
                     <td><div class="label label-danger">Denied</div></td>
-                    <td>
+                    <td class="text-right">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default btn-sm">Edit</button>
                             <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu dropdown-menu-right">
                                 <li><a href="#">Disable</a></li>
                                 <li><a href="#">Duplicate</a></li>
                                 <li><a href="#">Delete</a></li>

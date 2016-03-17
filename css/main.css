@@ -1,5 +1,5 @@
 body {
-    padding-top: 70px;
+    margin: 70px 0;
 }
 
 .minwidth {
@@ -8,4 +8,8 @@ body {
 
 .filters {
     margin-bottom: 10px;
+}
+
+.filters-list span.label {
+    font-weight: normal;
 }
