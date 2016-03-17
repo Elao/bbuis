@@ -269,12 +269,16 @@
             </div>
         </div>
 
-        <div id="event_update_vat-group"
-             class="form-group"><label class="col-lg-3 col-md-3 col-sm-3 control-label required" for="event_update_vat">
+        <div id="event_update_vat-group" class="form-group">
+            <label class="col-lg-3 col-md-3 col-sm-3 control-label required" for="event_update_vat">
             TVA
-        </label>
-            <div class="col-sm-1">
-                <input type="text" id="event_update_vat" name="event_update[vat]" required="required" class="form-control" value="20"/></div>
+            </label>
+            <div class="col-sm-2">
+                <div class="input-group">
+                    <input id="event_update_vat" type="text" class="form-control text-right" value="20">
+                    <span class="input-group-addon">%</span>
+                </div>
+            </div>
         </div>
 
         <div class="form-group submit-section">
