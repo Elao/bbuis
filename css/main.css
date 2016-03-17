@@ -1,0 +1,15 @@
+body {
+    margin: 70px 0;
+}
+
+.minwidth {
+    width: 1%;
+}
+
+.filters {
+    margin-bottom: 10px;
+}
+
+.filters-list span.label {
+    font-weight: normal;
+}
