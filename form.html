@@ -90,13 +90,15 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Users</a>
+                <a class="navbar-brand" href="#">Event</a>
             </div>
 
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Users management <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Who see who</a></li>
-                <li><a href="#">ACL</a></li>
+                <li><a href="#">Event management <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Participants</a></li>
+                <li><a href="#">Meetings</a></li>
+                <li><a href="#">Requests</a></li>
+                <li class="active"><a href="#">Settings</a></li>
             </ul>
         </div>
     </nav>
@@ -113,9 +115,21 @@
             </label>
             <div class="col-lg-9 col-md-9 col-sm-9">
                 <input type="text" id="event_update_title" name="event_update[title]" required="required"
-                       class="form-control form-control" value="Les rendez-vous CARNOT 2016"/>
+                       class="form-control form-control" value="Les rendez-vous  2016"/>
             </div>
         </div>
+
+        <div id="event_update_subtitle-group" class="form-group has-error">
+            <label class="col-lg-3 col-md-3 col-sm-3 control-label required" for="event_update_title">
+                Sous titre
+            </label>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <input type="text" id="event_update_subtitle" name="" required="required"
+                       class="form-control form-control" value=""/>
+                <ul class="list-unstyled"><li class="text-danger">Cette valeur ne doit pas être vide.</li></ul>
+            </div>
+        </div>
+
         <div id="event_update_locales-group" class="form-group">
             <label class="col-lg-3 col-md-3 col-sm-3 control-label required">
                 Langues
@@ -164,7 +178,7 @@
                                        for="event_update_fallback">
             Langue par défaut
         </label>
-            <div class="col-lg-9 col-md-9 col-sm-9"><select id="event_update_fallback" name="event_update[fallback]"
+            <div class="col-sm-2"><select id="event_update_fallback" name="event_update[fallback]"
                                                             data-choice="choice" class="form-control">
                 <option
 
@@ -224,7 +238,7 @@
                 <label class="control-label" for="event_update_translations_en_description">
                     Anglais
                 </label>
-                <textarea id="event_update_translations_en_description" name="event_update[translations][en][description]" class="form-control">In 7 editions, les Rendez-vous CARNOT became the major R&amp;D event for innovation.</textarea>
+                <textarea id="event_update_translations_en_description" name="event_update[translations][en][description]" class="form-control">In 7 editions, les Rendez-vous  became the major R&amp;D event for innovation.</textarea>
             </div>
         </div>
 
@@ -234,12 +248,23 @@
             </label>
             <div class="col-lg-9 col-md-9 col-sm-9">
                 <fieldset id="event_update_mode" data-choice="choice-expanded">
-                    <div class="radio"><label class="control-label required" for="event_update_mode_0"><input
-                            type="radio" id="event_update_mode_0" name="event_update[mode]" required="required"
-                            value="et" checked="checked"/><span>HT</span></label></div>
-                    <div class="radio"><label class="control-label required" for="event_update_mode_1"><input
-                            type="radio" id="event_update_mode_1" name="event_update[mode]" required="required"
-                            value="ati"/><span>TTC</span></label></div>
+                    <label class="radio-inline control-label required" for="event_update_mode_0">
+                        <input type="radio"
+                               id="event_update_mode_0"
+                               name="event_update[mode]"
+                               required="required"
+                               value="et"
+                               checked="checked">
+                        HT
+                    </label>
+                    <label class="radio-inline control-label required" for="event_update_mode_1">
+                        <input type="radio"
+                               id="event_update_mode_1"
+                               name="event_update[mode]"
+                               required="required"
+                               value="ati">
+                        TTC
+                    </label>
                 </fieldset>
             </div>
         </div>
@@ -259,7 +284,7 @@
                     Retour
                 </a>
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-9 text-right">
                 <button type="submit" id="event_update_submit" name="event_update[submit]" class=" btn btn-primary">
                     Enregistrer
                 </button>
