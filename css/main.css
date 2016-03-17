@@ -1,5 +1,5 @@
 body {
-    margin: 70px 0;
+    margin: 70px 0 0;
 }
 
 .minwidth {
@@ -13,4 +13,11 @@ body {
 .filters-list span.label {
     font-weight: normal;
     font-size: 12px;
+}
+
+.submit-section {
+    background-color: #f8f8f8;
+    border-top: 1px solid #e7e7e7;
+    padding: 20px 0;
+    margin: 0;
 }

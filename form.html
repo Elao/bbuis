@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap form</title>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-submenu.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Backoffice UI Sandbox</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false" data-submenu>
+                        Menu
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="#">Users</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Users management</a></li>
+                                <li><a href="#">Who see who</a></li>
+                                <li><a href="#">ACL</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="#">Another item</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false" data-submenu>
+                        <span class="glyphicon glyphicon-user"></span>
+                        Michel DUPOND
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Profile</a></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="#">Language</a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="#">English</a></li>
+                                <li><a href="#">Français</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Users</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Users management <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Who see who</a></li>
+                <li><a href="#">ACL</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="page-header">
+        Update event
+    </h1>
+
+    <form name="event_update" method="post" action="/app_dev.php/admin/fr/event/1/update" class="form-horizontal">
+
+        <div id="event_update_title-group" class="form-group">
+            <label class="col-lg-3 col-md-3 col-sm-3 control-label required" for="event_update_title">
+                Titre
+            </label>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <input type="text" id="event_update_title" name="event_update[title]" required="required"
+                       class="form-control form-control" value="Les rendez-vous CARNOT 2016"/>
+            </div>
+        </div>
+        <div id="event_update_locales-group" class="form-group">
+            <label class="col-lg-3 col-md-3 col-sm-3 control-label required">
+                Langues
+            </label>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                        allemand
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="" checked>
+                        anglais
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                        chinois
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                        espagnol
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="" checked>
+                        français
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                        italien
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div id="event_update_fallback-group"
+             class="form-group"><label class="col-lg-3 col-md-3 col-sm-3 control-label required"
+                                       for="event_update_fallback">
+            Langue par défaut
+        </label>
+            <div class="col-lg-9 col-md-9 col-sm-9"><select id="event_update_fallback" name="event_update[fallback]"
+                                                            data-choice="choice" class="form-control">
+                <option
+
+                        value="de"
+                >
+                    allemand
+
+                </option>
+                <option
+
+                        value="en"
+                >
+                    anglais
+
+                </option>
+                <option
+
+                        value="zh"
+                >
+                    chinois
+
+                </option>
+                <option
+
+                        value="es"
+                >
+                    espagnol
+
+                </option>
+                <option
+
+                        value="fr" selected="selected"
+                >
+                    français
+
+                </option>
+                <option
+
+                        value="it"
+                >
+                    italien
+
+                </option>
+            </select></div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-lg-3 col-md-3 col-sm-3 control-label required">
+                Description
+            </label>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <label class="control-label" for="event_update_translations_fr_description">
+                    Français
+                </label>
+                <textarea id="event_update_translations_fr_description" name="event_update[translations][fr][description]" class="form-control">LES RENDEZ-VOUS DE LA R&amp;D POUR LES ENTREPRISES</textarea>
+
+                <label class="control-label" for="event_update_translations_en_description">
+                    Anglais
+                </label>
+                <textarea id="event_update_translations_en_description" name="event_update[translations][en][description]" class="form-control">In 7 editions, les Rendez-vous CARNOT became the major R&amp;D event for innovation.</textarea>
+            </div>
+        </div>
+
+        <div id="event_update_mode-group" class="form-group">
+            <label class="col-lg-3 col-md-3 col-sm-3 control-label required" for="event_update_mode">
+                Mode
+            </label>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <fieldset id="event_update_mode" data-choice="choice-expanded">
+                    <div class="radio"><label class="control-label required" for="event_update_mode_0"><input
+                            type="radio" id="event_update_mode_0" name="event_update[mode]" required="required"
+                            value="et" checked="checked"/><span>HT</span></label></div>
+                    <div class="radio"><label class="control-label required" for="event_update_mode_1"><input
+                            type="radio" id="event_update_mode_1" name="event_update[mode]" required="required"
+                            value="ati"/><span>TTC</span></label></div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="event_update_vat-group"
+             class="form-group"><label class="col-lg-3 col-md-3 col-sm-3 control-label required" for="event_update_vat">
+            TVA
+        </label>
+            <div class="col-sm-1">
+                <input type="text" id="event_update_vat" name="event_update[vat]" required="required" class="form-control" value="20"/></div>
+        </div>
+
+        <div class="form-group submit-section">
+            <div class="col-sm-3">
+                <a href="#" class="btn btn-link">
+                    <span class="glyphicon glyphicon-arrow-left"></span>
+                    Retour
+                </a>
+            </div>
+            <div class="col-sm-9">
+                <button type="submit" id="event_update_submit" name="event_update[submit]" class=" btn btn-primary">
+                    Enregistrer
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="js/bootstrap-submenu.min.js"></script>
+<script>
+    var batch_action_one_element_label = 'Batch actions on 1 element';
+    var batch_action_several_elements_label = 'Batch actions on %count% elements';
+</script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
